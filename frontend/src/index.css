@@ -4,6 +4,27 @@
 
 @layer base {
   body {
-    @apply bg-slate-200;
+    @apply bg-indigo-950;
+  }
+}
+
+@layer components {
+  .locker-panel-section {
+    @apply bg-slate-300 mx-5 rounded-xl p-4;
+  }
+  .form-panel {
+    @apply mx-auto mt-[20vh] w-min p-3 rounded-2xl bg-slate-300;
+  }
+  .btn-submit {
+    @apply mt-4 border-2 border-black p-3 hover:bg-green-600 rounded-lg bg-green-700 text-white font-bold;
+  }
+  .form-section {
+    @apply text-lg p-1;
+  }
+  .text-field {
+    @apply rounded-lg p-2 w-[40vh] hover:bg-gray-200 border-2 border-black outline-none;
+  }
+  .link {
+    @apply bg-blue-600 border-2 border-black rounded-lg text-white p-3 text-center text-sm font-semibold mx-2;
   }
 }
