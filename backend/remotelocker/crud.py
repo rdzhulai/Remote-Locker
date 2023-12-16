@@ -8,10 +8,8 @@ def get_user(
 ) -> models.User | None:
     return (
         db.query(models.User)
-        .filter(
-            models.User.name == credentials.name
-            and models.User.password == credentials.password
-        )
+        .filter(models.User.name == credentials.name)
+        .filter(models.User.password == credentials.password)
         .first()
     )
 

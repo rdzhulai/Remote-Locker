@@ -7,7 +7,7 @@ from sqlalchemy.sql import insert
 def receive_after_create(target, connection, **kw):
     connection.execute(
         insert(Locker.__table__).values(
-            name="Locker", locked=False, blocked=False, status=None
+            name="locker", locked=False, blocked=False, status=None
         )
     )
 
@@ -16,6 +16,6 @@ def receive_after_create(target, connection, **kw):
 def receive_after_create(target, connection, **kw):
     connection.execute(
         insert(User.__table__).values(
-            name="Admin", password="0000", admin=True, locker_id=1
+            name="admin", password="0000", admin=True, locker_id=1
         )
     )

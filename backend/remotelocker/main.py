@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -24,11 +24,6 @@ def get_db():
         yield db
     finally:
         db.close()
-
-
-@app.get("/")
-async def hello():
-    return {"message": "Hello from FastAPI!"}
 
 
 @app.post(
